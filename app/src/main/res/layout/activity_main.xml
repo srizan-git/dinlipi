@@ -7,25 +7,86 @@
     tools:context=".MainActivity">
 
 
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout_editor_absoluteX="-28dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:tint="@android:color/white"
+        android:clickable="true"
+        android:elevation="8dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_notes"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:tint="@android:color/white"
+        android:clickable="true"
+        android:elevation="8dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_add_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_reminder"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_voice_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="8dp"
+        android:tint="@android:color/white"
+        android:clickable="true"
+        android:elevation="8dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_add_reminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_mic"
+        android:visibility="invisible"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:tint="@android:color/white"
+        android:elevation="8dp"
 
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="48dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add" />
 
-        android:clickable="true"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:srcCompat="@drawable/ic_add"
-
-        />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom_navigation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

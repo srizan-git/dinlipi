@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.srizan.dinlipi.fragments.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.srizan.dinlipi.fragments.ReminderFragment"
+        android:label="fragment_reminder"
+        tools:layout="@layout/fragment_reminder" />
+    <fragment
+        android:id="@+id/voiceNotesFragment"
+        android:name="com.srizan.dinlipi.fragments.VoiceNotesFragment"
+        android:label="fragment_voice_notes"
+        tools:layout="@layout/fragment_voice_notes" />
+    <fragment
+        android:id="@+id/noteEditorFragment"
+        android:name="com.srizan.dinlipi.fragments.NoteEditorFragment"
+        android:label="fragment_note_editor"
+        tools:layout="@layout/fragment_note_editor" />
+    <fragment
+        android:id="@+id/reminderEditorDialog"
+        android:name="com.srizan.dinlipi.dialog.ReminderEditorDialog"
+        android:label="ReminderEditorDialog" />
+    <fragment
+        android:id="@+id/datePickerFragment"
+        android:name="com.srizan.dinlipi.pickers.DatePickerFragment"
+        android:label="DatePickerFragment" />
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="com.srizan.dinlipi.pickers.TimePickerFragment"
+        android:label="TimePickerFragment" />
+    <fragment
+        android:id="@+id/voiceRecorderFragment"
+        android:name="com.srizan.dinlipi.VoiceRecorderFragment"
+        android:label="fragment_voice_recorder"
+        tools:layout="@layout/fragment_voice_recorder" />
+</navigation>
