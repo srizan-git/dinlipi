@@ -39,7 +39,7 @@
         android:label="TimePickerFragment" />
     <fragment
         android:id="@+id/voiceRecorderFragment"
-        android:name="com.srizan.dinlipi.VoiceRecorderFragment"
+        android:name="com.srizan.dinlipi.fragments.VoiceRecorderFragment"
         android:label="fragment_voice_recorder"
         tools:layout="@layout/fragment_voice_recorder" />
 </navigation>
