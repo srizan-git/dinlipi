@@ -9,4 +9,5 @@
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="ic_launcher_background">#8168AB</color>
+    <color name="edit_text">#F8F5F5</color>
 </resources>

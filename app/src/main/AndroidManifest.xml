@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".VoiceNotesActivity"></activity>
+        <activity android:name=".VoiceRecorderActivity" />
+        <activity android:name=".ReminderActivity" />
+        <activity android:name=".NoteEditorActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

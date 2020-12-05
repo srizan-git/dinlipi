@@ -4,6 +4,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +20,7 @@ public class ReminderEditorDialog extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //View view = getLayoutInflater().inflate(R.layout.dialog_add_reminder,false);
 
         builder.setView(R.layout.dialog_add_reminder)
                 .setMessage("Add Reminder...")
@@ -30,7 +34,15 @@ public class ReminderEditorDialog extends DialogFragment {
                         // User cancelled the dialog
                     }
                 });
+
+
         // Create the AlertDialog object and return it
         return builder.create();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 }

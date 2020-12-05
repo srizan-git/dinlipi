@@ -7,6 +7,11 @@ public class Note {
     private String mNoteTitle;
     private String mNoteText;
 
+    public Note(String mNoteTitle, String mNoteText) {
+        this.mNoteTitle = mNoteTitle;
+        this.mNoteText = mNoteText;
+    }
+
     public Date getDate() {
         return mDate;
     }
