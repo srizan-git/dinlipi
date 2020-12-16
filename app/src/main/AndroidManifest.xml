@@ -9,11 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VoiceNotesActivity"></activity>
-        <activity android:name=".VoiceRecorderActivity" />
-        <activity android:name=".ReminderActivity" />
-        <activity android:name=".NoteEditorActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ReminderEditorActivity"></activity>
+        <activity
+            android:name=".NoteActivity"
+            android:label="Notes" />
+        <activity
+            android:name=".VoiceNotesActivity"
+            android:label="Voice Notes" />
+        <activity
+            android:name=".VoiceRecorderActivity"
+            android:label="Voice Recorder" />
+        <activity
+            android:name=".ReminderActivity"
+            android:label="Reminders" />
+        <activity
+            android:name=".NoteEditorActivity"
+            android:label="Note Editor" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -18,10 +18,10 @@ public class NoteDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String SQL_CREATE_NOTES_TABLE =  "CREATE TABLE " + NoteContract.NoteEntry.TABLE_NAME + " ("
-                + NoteContract.NoteEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + NoteContract.NoteEntry.COLUMN_NOTE_TITLE + " TEXT NOT NULL, "
-                + NoteContract.NoteEntry.COLUMN_NOTE_TEXT + " TEXT);";
+        String SQL_CREATE_NOTES_TABLE =  "CREATE TABLE " + DinlipiContract.NoteEntry.TABLE_NAME + " ("
+                + DinlipiContract.NoteEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + DinlipiContract.NoteEntry.COLUMN_NOTE_TITLE + " TEXT NOT NULL, "
+                + DinlipiContract.NoteEntry.COLUMN_NOTE_TEXT + " TEXT);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_NOTES_TABLE);

@@ -43,7 +43,7 @@ public class VoiceNotesActivity extends AppCompatActivity implements View.OnClic
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId()==R.id.nav_notes){
-                    Intent intent = new Intent(VoiceNotesActivity.this,MainActivity.class);
+                    Intent intent = new Intent(VoiceNotesActivity.this,NoteActivity.class);
                     startActivity(intent);
                 }
 
@@ -81,8 +81,8 @@ public class VoiceNotesActivity extends AppCompatActivity implements View.OnClic
             case R.id.fab_add_reminder:
                 toggle();
 
-                ReminderEditorDialog editorDialog = new ReminderEditorDialog();
-                editorDialog.show(getSupportFragmentManager(),"asd");
+                Intent intent2 = new Intent(VoiceNotesActivity.this,ReminderEditorActivity.class);
+                startActivity(intent2);
                 break;
 
             case R.id.fab_add_voice_note:

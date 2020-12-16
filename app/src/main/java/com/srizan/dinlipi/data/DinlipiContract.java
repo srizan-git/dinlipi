@@ -3,7 +3,7 @@ package com.srizan.dinlipi.data;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-public class NoteContract {
+public class DinlipiContract {
 
     /**
      * The "Content authority" is a name for the entire content provider, similar to the

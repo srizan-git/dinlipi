@@ -1,6 +1,7 @@
 package com.srizan.dinlipi.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.srizan.dinlipi.MainActivity;
+import com.srizan.dinlipi.NoteEditorActivity;
 import com.srizan.dinlipi.R;
 import com.srizan.dinlipi.model.Note;
 
@@ -22,11 +24,10 @@ import java.util.ArrayList;
 
 public class NoteAdapter extends ArrayAdapter<Note> {
 
-    NavController navController;
 
     public NoteAdapter(@NonNull Context context, ArrayList<Note> noteArrayList) {
         super(context, 0, noteArrayList);
-        this.navController=navController;
+
     }
 
     @NonNull
@@ -38,7 +39,7 @@ public class NoteAdapter extends ArrayAdapter<Note> {
 
         }
 
-        Note currentNote = getItem(position);
+        final Note currentNote = getItem(position);
 
         TextView noteTitle = noteListView.findViewById(R.id.note_title);
         noteTitle.setText(currentNote.getNoteTitle());
@@ -58,6 +59,13 @@ public class NoteAdapter extends ArrayAdapter<Note> {
         noteListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), NoteEditorActivity.class);
+                intent.putExtra("title", currentNote.getNoteTitle());
+                intent.putExtra("note", currentNote.getNoteText());
+
+
+                getContext().startActivity(intent);
 
 
             }
