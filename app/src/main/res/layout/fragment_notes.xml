@@ -8,9 +8,11 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <include
-        layout="@layout/list_notes"
 
-        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/list_notes"/>
 
 </FrameLayout>

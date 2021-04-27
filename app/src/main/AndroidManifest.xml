@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:name=".data.NoteProvider"
-            android:authorities="com.srizan.dinlipi"
-            android:exported="false" />
     </application>
 
 </manifest>

@@ -8,12 +8,13 @@
     <EditText
         android:padding="16dp"
         android:hint="Enter Title"
-        android:id="@+id/editText"
+        android:id="@+id/edit_text_note_title"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         />
 
     <EditText
+        android:id="@+id/edit_text_note_text"
         android:padding="16dp"
         android:hint="Enter Your Note"
         android:layout_width="match_parent"

@@ -62,14 +62,14 @@
         <TextView
             android:textSize="20sp"
             android:textStyle="bold"
-            android:id="@+id/title"
+            android:id="@+id/text_view_title_preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title" />
         <TextView
             android:maxLines="3"
 
-            android:id="@+id/preview"
+            android:id="@+id/text_view_note_text_preview"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"

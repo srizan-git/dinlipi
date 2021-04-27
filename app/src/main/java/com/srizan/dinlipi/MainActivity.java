@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Bottom Nab Code
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
         fab.setOnClickListener(new View.OnClickListener() {
